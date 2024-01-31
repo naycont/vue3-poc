@@ -28,6 +28,7 @@ import NavBar from './components/navBar/NavBar.vue'
          height: 100%;
          display: flex;
          &--MainView {
+            width: 100%;
             padding: var(--global-padding);
          }
       }
