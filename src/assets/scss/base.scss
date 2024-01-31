@@ -1,5 +1,16 @@
 /* color palette from <https://github.com/vuejs/theme> */
+
+@import "fonts";
+@import "variables";
+
+
 :root {
+  --background-primary-color: #{$background-primary-color};
+  --background-secondary-color: #{$background-secondary-color};
+  --global-padding: #{$global-padding};
+
+  --primary-text-color: #{$primary-text-color};
+
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
   --vt-c-white-mute: #f2f2f2;
@@ -59,28 +70,11 @@
 }
 
 body {
+  @extend %nunito-normal;
   min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
-  transition:
-    color 0.5s,
-    background-color 0.5s;
-  line-height: 1.6;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  font-size: 15px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  min-width: 100%;
+  width: 100%;
+  padding: 0;
+  color: var(--primary-text-color);
+  background-color: var(--background-primary-color);
 }
