@@ -9,7 +9,7 @@
   --background-secondary-color: #{$background-secondary-color};
   --global-padding: #{$global-padding};
 
-  --primary-text-color: #{$primary-text-color};
+  --primary-color: #{$primary-color};
 
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
@@ -70,11 +70,14 @@
 }
 
 body {
+  width: 100%;
   @extend %nunito-normal;
-  min-height: 100vh;
-  min-width: 100%;
+  color: var(--primary-color);
+  background-color: var(--background-primary-color);
+}
+
+html, body {
+  height: 100%;
   width: 100%;
   padding: 0;
-  color: var(--primary-text-color);
-  background-color: var(--background-primary-color);
 }
