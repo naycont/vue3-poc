@@ -2,8 +2,9 @@
     <div class="home">
         <v-card width="100%" min-height="400" class="home__Card">
             <div class="home__Card--text">
-                <label class="text-h2">Welcome!</label><br>
-                <p class="text-body">This is a SPA using vue3</p>
+                <label class="text-h2">{{ this.$t('home.title') }}</label>
+                <br>
+                <p class="text-body">{{ this.$t("home.text") }}</p>
             </div>
         </v-card>
     </div>
