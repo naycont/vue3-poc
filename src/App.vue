@@ -19,7 +19,6 @@ import NavBar from './components/navBar/NavBar.vue'
 </template>
 
 
-
 <style scoped lang="scss">
    .main-app {
       height: 100%;

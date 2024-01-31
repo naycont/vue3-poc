@@ -1,10 +1,13 @@
 <template>
     <div class="navbar">
         <div class="navbar__logo">
-            this is logo
+            Your logo here
         </div>
         <div class="navbar__menu">
-            this is menu
+            <v-btn 
+                variant="text" 
+                icon="menu"
+            ></v-btn>
         </div>
     </div>
 </template>
