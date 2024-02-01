@@ -1,6 +1,15 @@
 {
     "home": {
-        "title": "Welcome",
-        "text": "This is a SPA using vue3"
+        "text": "This is a SPA using vue3",
+        "title": "Welcome"
+    },
+    "sideMenu": {
+        "footer": {
+            "language": "Language",
+            "languages": {
+                "es": "Español",
+                "en": "Inglés"
+            }
+        }
     }
 }

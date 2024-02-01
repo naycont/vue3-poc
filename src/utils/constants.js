@@ -1,7 +1,7 @@
 'use strict'
 
-const constants = {
-    DEFAULT_LOCALE: 'es'
-};
+import messages from "@intlify/unplugin-vue-i18n/messages"
 
-export default constants;
+export const DEFAULT_LOCALE = 'es'
+
+export const SUPPORTED_LOCALES =  Object.keys(messages)

@@ -1,7 +1,27 @@
 .side-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 250px;
     background-color: var(--primary-color);
     height: 100%;
     color: white;
     padding: var(--global-padding);
+    &__footer {
+        &--language {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .side-menu__footer--languageLabel {
+                padding-top: 8px;
+            }
+            .side-menu__footer--languageSelector {
+                margin-left: var(--global-padding);
+                width: 100%;
+                &.v-list-item {
+                    background-color: red;
+                 }
+            }
+        }
+    }
 }
