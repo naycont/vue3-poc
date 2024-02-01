@@ -1,9 +1,6 @@
 <script setup>
-import { ref, computed } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { SUPPORTED_LOCALES } from '@/utils/constants'
-
-const { t, locale } = useI18n()
+import { ref } from 'vue'
+import i18n from '@/components/i18n/i18n.vue'
 
 const menuItems = ref([
     {
@@ -34,25 +31,6 @@ const menuItems = ref([
         ],
     },
 ])
-
-const currentLanguage = ref(locale.value)
-
-const languagesSelector = computed(() => {
-    const localesArray = [];
-    SUPPORTED_LOCALES.forEach(localeKey => {
-        const localeTitle = `sideMenu.footer.languages.${localeKey}`
-        localesArray.push({
-            value: localeKey,
-            title: t(localeTitle)
-        })
-    })
-    return localesArray
-})
-
-const changeLanguage = (languageKey) => {
-    console.log('changeLanguage')
-    console.log(languageKey)
-}
 
 </script>
 
@@ -86,19 +64,7 @@ const changeLanguage = (languageKey) => {
             </template>
         </v-list>
         <div class="side-menu__footer">
-            <div class="side-menu__footer--language">
-                <label class="side-menu__footer--languageLabel">{{ $t('sideMenu.footer.language') }}</label>
-                <v-select
-                    class="side-menu__footer--languageSelector"
-                    item-color="red"
-                    hide-details
-                    variant="underlined"
-                    density="compact"
-                    :items="languagesSelector"
-                    v-model="currentLanguage"
-                    @update:modelValue="changeLanguage"
-                ></v-select>
-            </div>
+            <i18n/>
         </div>
     </div>
 </template>

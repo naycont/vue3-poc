@@ -1,0 +1,9 @@
+.i18n {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__languageSelector {
+        margin-left: var(--global-padding);
+        width: 100%;
+    }
+}
