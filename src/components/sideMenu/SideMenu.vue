@@ -1,35 +1,33 @@
 <script setup>
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import i18n from '@/components/i18n/i18n.vue'
+
+const { t } = useI18n()
 
 const menuItems = ref([
     {
         id: 'home',
-        title: 'Home',
+        title: t('sideMenu.menu.home'),
         icon: 'home'
     },
     {
         id: 'users',
-        title: 'Users',
+        title: t('sideMenu.menu.users'),
         icon: 'group'
     },
     {
         id: 'settings',
-        title: 'Settings',
+        title: t('sideMenu.menu.settings'),
         icon: 'settings',
         childs: [
             {
-                id: 'collaborators',
-                title: 'Collaborators',
-                icon: 'person'
-            },
-            {
-                id: 'extern',
-                title: 'Extern',
-                icon: 'group_add'
+                id: 'theme',
+                title: t('sideMenu.menu.theme'),
+                icon: 'palette'
             }
-        ],
-    },
+        ]
+    }
 ])
 
 </script>

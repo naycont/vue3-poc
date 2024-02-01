@@ -1,7 +1,7 @@
 <template>
     <div class="navbar">
         <div class="navbar__logo">
-            Your logo here
+            {{$t('header.logo')}}
         </div>
         <div class="navbar__menu">
             <v-btn 

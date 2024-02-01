@@ -1,31 +1,31 @@
+
 <script setup>
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { LOCALES_NAMES } from '@/utils/constants'
 
-const { t, locale, availableLocales } = useI18n({ useScope: 'global' })
+const { locale, availableLocales } = useI18n({ useScope: 'global' })
 
 const currentLanguage = ref(locale.value)
 
 const languagesSelector = computed(() => {
-    const localesArray = [];
-    availableLocales.forEach(localeKey => {
-        const localeTitle = `sideMenu.footer.languages.${localeKey}`
-        localesArray.push({
+    const localesArray = availableLocales.map(localeKey => {
+        return {
             value: localeKey,
-            title: t(localeTitle)
-        })
+            title: LOCALES_NAMES[localeKey]
+        }
     })
     return localesArray
 })
 
 const changeLanguage = (languageKey) => {
-    locale.value = languageKey;
+    locale.value = languageKey
 }
 </script>
 
 <template>
     <div class="i18n">
-        <label class="i18n__language">{{ $t('sideMenu.footer.language') }}</label>
+        <label class="i18n__language">{{ $t('sideMenu.i18n.language') }}</label>
         <v-select
             class="i18n__languageSelector"
             item-color="red"

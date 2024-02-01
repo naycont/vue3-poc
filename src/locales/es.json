@@ -1,15 +1,20 @@
 {
+    "header": {
+        "logo": "Tu logo aquí"
+    },
     "home": {
         "text": "Esto es una SPA usando vue3",
         "title": "Bienvenido"
     },
     "sideMenu": {
-        "footer": {
-            "language": "Idioma",
-            "languages": {
-                "es": "Spanish",
-                "en": "English"
-            }
+        "menu": {
+            "home": "Inicio",
+            "users": "Usuarios",
+            "settings": "Configuración",
+            "theme": "Tema"
+        },
+        "i18n": {
+            "language": "Idioma"
         }
     }
 }
